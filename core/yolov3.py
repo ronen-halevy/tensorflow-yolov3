@@ -142,7 +142,12 @@ class YOLOV3(object):
         boxes1 = tf.concat([tf.minimum(boxes1[..., :2], boxes1[..., 2:]),
                             tf.maximum(boxes1[..., :2], boxes1[..., 2:])], axis=-1)
         boxes2 = tf.concat([tf.minimum(boxes2[..., :2], boxes2[..., 2:]),
+
+
+
                             tf.maximum(boxes2[..., :2], boxes2[..., 2:])], axis=-1)
+
+
 
         boxes1_area = (boxes1[..., 2] - boxes1[..., 0]) * (boxes1[..., 3] - boxes1[..., 1])
         boxes2_area = (boxes2[..., 2] - boxes2[..., 0]) * (boxes2[..., 3] - boxes2[..., 1])
